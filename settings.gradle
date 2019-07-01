@@ -1,0 +1,5 @@
+rootProject.name = 'carrental'
+
+include 'frontend'
+include 'backend'
+include 'database'
