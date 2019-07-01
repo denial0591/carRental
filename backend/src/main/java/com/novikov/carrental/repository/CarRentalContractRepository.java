@@ -25,7 +25,7 @@ public interface CarRentalContractRepository extends JpaRepository<CarRentalCont
      * @param modelId идентификатор модели автомобиля
      * @return строка, показывающая среднюю продолжительность
      */
-    @Query(value = "select to_char(avg(end_date - start_date), 'HH12\"h\" MI\"m\" SS\"s\"') as avg_interval from car_rental_contract c " +
+    @Query(value = "select to_char(avg(end_date - start_date), 'DD\"day\" HH12\"h\" MI\"m\" SS\"s\"') as avg_interval from car_rental_contract c " +
             "join car on c.car_id = car.id " +
             "where car.model_id = ?1",
             nativeQuery = true)
